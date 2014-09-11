@@ -52,6 +52,8 @@ module RedmineApp
     # Do not include all helpers
     config.action_controller.include_all_helpers = false
 
+    config.secret_token = '63bf82770a5401ff99e02cfe72d8a63348cf69840a4141b58e8f37f1d2f5524b01458f9065ed223d8a4d07c97dfd19760bfc82839bfa65abf398666e9cff0a21'
+
     config.session_store :cookie_store, :key => '_redmine_session'
 
     if File.exists?(File.join(File.dirname(__FILE__), 'additional_environment.rb'))
