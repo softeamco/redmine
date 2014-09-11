@@ -11,7 +11,7 @@ set :scm, "git"
 set :repository, "git@github.com:softeamco/#{application}.git"
 set :branch, "master"
 set :domain, "#{user}@46.4.39.138"
-set :shared_children, shared_children + %w{public/uploads public/media}
+set :shared_children, shared_children + %w{public/uploads plugins}
 default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
 
