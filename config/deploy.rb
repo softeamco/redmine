@@ -7,7 +7,6 @@ set :user, "redmine"
 set :deploy_to, "/home/#{user}/#{application}"
 set :deploy_via, :remote_cache
 set :use_sudo, false
-# set :port, 60321
 set :scm, "git"
 set :repository, "git@github.com:softeamco/#{application}.git"
 set :branch, "master"
