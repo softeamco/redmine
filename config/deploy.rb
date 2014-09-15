@@ -1,16 +1,16 @@
 require "bundler/capistrano"
 
-server "46.4.39.138", :web, :app, :db, primary: true
+server "5.9.110.148", :web, :app, :db, primary: true
 
 set :application, "redmine"
-set :user, "redmine"
+set :user, "softeam"
 set :deploy_to, "/home/#{user}/#{application}"
 set :deploy_via, :remote_cache
 set :use_sudo, false
 set :scm, "git"
 set :repository, "git@github.com:softeamco/#{application}.git"
 set :branch, "master"
-set :domain, "#{user}@46.4.39.138"
+set :domain, "#{user}@5.9.110.148"
 set :shared_children, shared_children + %w{public/uploads plugins}
 default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
