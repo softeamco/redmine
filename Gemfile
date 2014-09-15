@@ -51,4 +51,23 @@ group :test do
   gem "selenium-webdriver"
 end
 
+gem "acts-as-taggable-on", "~> 2.3.1"
+gem "vcard", "~> 0.2.8"
+gem "spreadsheet", "~> 0.6.8"
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
+gem 'liquid', '~> 2.4.1'
+gem 'acts_as_votable', '~> 0.4.0'
+gem 'rich', '1.4.6'
+gem 'kaminari'
+gem 'htmlentities'
+gem 'paperclip', '~> 3.5.4'
+if RUBY_VERSION > '1.9'
+  gem "money", "~> 5.1.0"
+  gem "prawn", "~> 1.0.0"
+else
+  gem "money", "~> 5.0.0"
+  gem "prawn", "0.12.0"
+end
+
 gem 'unicorn'
