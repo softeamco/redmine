@@ -36,6 +36,7 @@ namespace :deploy do
     run "ln -nfs #{shared_path}/secret_token.rb #{release_path}/config/initializers/secret_token.rb"
     run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
     run "ln -nfs #{shared_path}/plugins #{release_path}/plugins"
+    run "ln -nfs #{shared_path}/public/themes #{release_path}/themes"
   end
   after "deploy:finalize_update", "deploy:symlink_config"
 
